@@ -1,0 +1,41 @@
+{
+
+  "manifest_version": 2,
+  "name": "RainIN",
+  "version": "0.1",
+  "incognito": "not_allowed",
+
+  "developer": {
+    "name": "Shubhrendu Tripathi",
+    "url": "https://shubhtr.wordpress.com/rainin.html"
+  },
+
+  "homepage_url": "https://shubhtr.github.io/rainin.html",
+
+  "author": "Shubhrendu Tripathi",
+
+  "description":  "RainIN is a Firefox extension that displays the number of days remaining before the arrival of monsoon in a selected city of India on the Firefox toolbar.",
+
+  "icons": {
+    "48": "icons/wi-day-rain.png"
+  },
+
+  "options_ui": {
+    "page": "options/options.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.mozilla.org/*"],
+      "js": ["firefon.js"]
+    }
+  ],
+
+  "browser_action": {
+    "default_icon": {
+      "48": "icons/wi-day-rain.png"
+    },
+    "default_title": "RainIN"
+  }
+
+}
